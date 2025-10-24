@@ -2,7 +2,7 @@ import InnerAbout from "@/components/inner-pages/about";
 import Wrapper from "@/layout/Wrapper";
 
 export const metadata = {
-   title: "About Charite - Charity & Donation React Next js Template",
+   title: "Good Software",
 };
 const index = () => {
    return (
