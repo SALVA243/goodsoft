@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import { useState } from "react";
 import CountUp from "react-countup";
 import { InView } from "react-intersection-observer";
 
 interface CountType {
   number: number;
-//   text?: string;
+  //   text?: string;
 }
 
 const Count = ({ number }: CountType) => {
@@ -26,7 +26,8 @@ const Count = ({ number }: CountType) => {
             <span ref={countUpRef} />
             <InView
               as="span"
-              onChange={(inView: any) => visibleChangeHandler(inView)}>
+              onChange={(inView: any) => visibleChangeHandler(inView)}
+            >
               {/* {text && <span>{text}</span>}  */}
             </InView>
           </div>

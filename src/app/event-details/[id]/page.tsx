@@ -1,7 +1,5 @@
 // import EventDetailsArea from "@/components/events/event-details/EventDetailsArea";
-// import Event_data from "@/data/ProduitsData";
-import Event_data from "@/data/blogData";
-
+import Event_data from "@/data/ProduitsData";
 import Wrapper from "@/layout/Wrapper";
 import FooterOne from "@/layout/footers/FooterOne";
 import HeaderOne from "@/layout/headers/HeaderOne";

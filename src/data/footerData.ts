@@ -1,48 +1,44 @@
 interface DataType {
-   id:number;
-   page:string;
-   widget_title: string;
-   footer_link: {
-      link: string;
-      link_title: string;
-   }[];
-
+  id: number;
+  page: string;
+  widget_title: string;
+  footer_link: {
+    link: string;
+    link_title: string;
+  }[];
 }
 
 const footer_data: DataType[] = [
-   {
-      id:1,
-      page:"home_1",
-      widget_title: "About",
-      footer_link: [{ link: "#", link_title: "Home" }, { link: "#", link_title: "Donation" }, { link: "#", link_title: "About us" }, { link: "#", link_title: "Event" }, { link: "#", link_title: "Features" },]
-   },
-   {
-      id:2,
-      page:"home_1",
-      widget_title: "Quick links",
-      footer_link: [{ link: "#", link_title: "Causes" }, { link: "#", link_title: "About" }, { link: "#", link_title: "New campaign" }, { link: "#", link_title: "Site map" }, { link: "#", link_title: "Stories" },]
-   },
-   {
-      id:3,
-      page:"home_1",
-      widget_title: "Explore",
-      footer_link: [{ link: "#", link_title: "Donate" }, { link: "#", link_title: "Campaigns" }, { link: "#", link_title: "Fundraise" }, { link: "#", link_title: "Volunteers" }, { link: "#", link_title: "Sponsors" },]
-   },
-
-   // home two
-
-   {
-      id:1,
-      page:"home_2",
-      widget_title: "About",
-      footer_link: [{ link: "#", link_title: "Home" }, { link: "#", link_title: "Donation" }, { link: "#", link_title: "About us" }, { link: "#", link_title: "Event" },]
-   },
-   {
-      id:2,
-      page:"home_2",
-      widget_title: "Quick links",
-      footer_link: [{ link: "#", link_title: "Causes" }, { link: "#", link_title: "About" }, { link: "#", link_title: "New campaign" }, { link: "#", link_title: "Site map" },]
-   },
-]
+  {
+    id: 3,
+    page: "home_1",
+    widget_title: "Contacts",
+    footer_link: [
+      { link: "#", link_title: "Kinshasa, Gombe, 69, Av. Mont des Arts" },
+      { link: "#", link_title: "+(243)816162254" },
+      { link: "#", link_title: "goodsoftwarerdc@gmail.com" },
+    ],
+  },
+  {
+    id: 1,
+    page: "home_1",
+    widget_title: "Apropos",
+    footer_link: [
+      { link: "/", link_title: "Home" },
+      { link: "/about", link_title: "Nous" },
+      { link: "/contact", link_title: "Contact" },
+    ],
+  },
+  {
+    id: 2,
+    page: "home_1",
+    widget_title: "Realisations",
+    footer_link: [
+      { link: "/produits", link_title: "Nos Produits" },
+      { link: "/clients", link_title: "Nos Clients" },
+      { link: "#", link_title: "Nos Services" },
+    ],
+  },
+];
 
 export default footer_data;

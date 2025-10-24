@@ -1,8 +1,6 @@
 // frontend/src/app/event-details/page.tsx
 
-// import Event_data from "@/data/ProduitsData";
-import Event_data from "@/data/blogData";
-
+import Event_data from "@/data/ProduitsData";
 import Link from "next/link";
 import Wrapper from "@/layout/Wrapper";
 import HeaderOne from "@/layout/headers/HeaderOne";

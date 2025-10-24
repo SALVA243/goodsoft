@@ -1,4 +1,4 @@
-// import AssistanceComptable from "@/components/services/assistanceComptable";
+import AssistanceComptable from "@/components/services/assistanceComptable";
 import Wrapper from "@/layout/Wrapper";
 
 export const metadata = {
@@ -7,8 +7,7 @@ export const metadata = {
 const index = () => {
   return (
     <Wrapper>
-      {/* <AssistanceComptable /> */}
-      <div>Assistance Comptable</div>
+      <AssistanceComptable />
     </Wrapper>
   );
 };

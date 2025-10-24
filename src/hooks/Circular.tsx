@@ -10,28 +10,24 @@ const CircleProgress = ({
   const [displayedProgress, setDisplayedProgress] = useState(0);
   const circleRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInViewport(entry.isIntersecting);
-      },
-      {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1, // 0.1 means 10% of the element must be visible
-      }
-    );
+ useEffect(() => {
+  const observer = new IntersectionObserver(([entry]) => {
+    setIsInViewport(entry.isIntersecting);
+  });
 
-    if (circleRef.current) {
-      observer.observe(circleRef.current);
+  const currentRef = circleRef.current; // Capture la valeur actuelle
+
+  if (currentRef) {
+    observer.observe(currentRef);
+  }
+
+  return () => {
+    if (currentRef) {
+      observer.unobserve(currentRef); // Utilisation de la valeur sauvegardée
     }
+  };
+}, []);
 
-    return () => {
-      if (circleRef.current) {
-        observer.unobserve(circleRef.current);
-      }
-    };
-  }, []);
 
   useEffect(() => {
     if (isInViewport && percentage <= finish) {

@@ -1,4 +1,4 @@
-import ProduitsComptabilite from "@/components/events/event";
+import ProduitsComptabilite from "@/components/events/ProduitsComptabilite";
 import Wrapper from "@/layout/Wrapper";
 
 export const metadata = {

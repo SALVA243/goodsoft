@@ -11,27 +11,23 @@ const LinearProgress = ({
   const progressRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInViewport(entry.isIntersecting);
-      },
-      {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1,
-      }
-    );
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsInViewport(entry.isIntersecting);
+    });
 
-    if (progressRef.current) {
-      observer.observe(progressRef.current);
+    const currentRef = progressRef.current; // Capture la valeur actuelle
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (progressRef.current) {
-        observer.unobserve(progressRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef); // Utilisation de la valeur sauvegardée
       }
     };
   }, []);
+
 
   useEffect(() => {
     if (isInViewport && percentage <= finish) {

@@ -1,68 +1,71 @@
-import Image from "next/image"
-
-import aboutAuthor from "@/assets/img/about/author.jpg"
-import aboutAuthorSignature from "@/assets/img/about/signature.png"
-import aboutThumb from "@/assets/img/about/about-three-right.png"
+import Image from "next/image";
+import aboutThumb from "@/assets/img/about/about-three-right.png";
 
 interface ContentType {
-   sub_title: string;
-   title: JSX.Element;
-   desc: JSX.Element;
-   list: string[];
-   author: string;
-   designation: string;
+  sub_title: string;
+  title: JSX.Element;
+  list: string[];
 }
 
 const about_content: ContentType = {
-   sub_title: "About us",
-   title: (<>We make a different life for <span>African people</span></>),
-   desc: (<>There are many variations of passages of available but the majority have suffered alteration in some form, by injected humou ndomised words even slightly believable Making this the first true.</>),
-   list: ["Consectetur adipiscing elitsed", "Nostra dapibus varius et semper", "Nullam venenatis ultricies", "Environment For Our Next", "Consectetur adipiscing elitsed", "Maximus a augue Nullam ante"],
-   author: "Ronald Richards",
-   designation: "Funder & CEO , Charity Club",
-}
-
-const { sub_title, title, desc, list, author, designation } = about_content;
+  sub_title: "Apropos",
+  title: (
+    <>
+      <span style={{ textAlign: "justify" }}>
+        Le choix de <span>Good Software</span> dépend de plusieurs facteurs,
+        tels que les besoins spécifiques de votre organisation, les contraintes
+        budgétaires et la nature des défis informatiques que vous souhaitez
+        relever.
+      </span>
+      <br /> <br />
+      <span style={{ textAlign: "justify" }}>
+        Avec notre engagement envers la Qualité, la Rapidité et la Fiabilité,
+        Good Software se distingue comme votre partenaire de confiance pour
+        toutes vos solutions logicielles et besoins informatiques.
+      </span>
+    </>
+  ),
+  list: [
+    "Identifier les besoins spécifiques de votre organisation",
+    "Établir les contraintes budgétaires",
+    "Choisir des solutions adaptées aux défis informatiques",
+    "Prioriser la Qualité, la Rapidité et la Fiabilité",
+    "Sélectionner Good Software comme partenaire",
+    "Implémentation et support continu",
+  ],
+};
+const { sub_title, title, list } = about_content;
 
 const About = () => {
-   return (
-      <div className="about-us-three pt-120 pb-55">
-         <div className="container">
-            <div className="row gap-80 align-items-center">
-               <div className="col-xl-6">
-                  <div className="about-us-content-three mb-65">
-                     <div className="section-title mb-65">
-                        <span className="section-title__subtitle mb-10">{sub_title}</span>
-                        <h2>{title}</h2>
-                     </div>
-                     <p>{desc}</p>
-                     <ul className="list-style-one pt-15">
-                        {list.map((list, index) => (<li key={index}>{list}</li>))}
-                     </ul>
-                     <hr className="mt-30 mb-5" />
-                     <div className="about-author">
-                        <div className="about-author--img">
-                           <Image src={aboutAuthor} alt="Author" />
-                        </div>
-                        <div className="about-author--content">
-                           <h5>{author}</h5>
-                           <span>{designation}</span>
-                        </div>
-                        <div className="about-author--signature">
-                           <Image src={aboutAuthorSignature} alt="Signature" />
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div className="col-xl-6">
-                  <div className="about-us-image-three mb-65">
-                     <Image src={aboutThumb} alt="About" />
-                  </div>
-               </div>
+  return (
+    <div className="about-us-three pt-120 pb-55">
+      <div className="container">
+        <div className="row gap-80 align-items-center">
+          <div className="col-xl-6">
+            <div className="about-us-content-three mb-65">
+              <div className="section-title mb-65">
+                <span className="section-title__subtitle mb-30">
+                  {sub_title}
+                </span>
+                <p>{title}</p>
+              </div>
+              <ul className="list-style-one pt-15">
+                {list.map((list, index) => (
+                  <li key={index}>{list}</li>
+                ))}
+              </ul>
+              <hr className="mt-30 mb-5" />
             </div>
-         </div>
+          </div>
+          <div className="col-xl-6">
+            <div className="about-us-image-three mb-65">
+              <Image src={aboutThumb} alt="About" />
+            </div>
+          </div>
+        </div>
       </div>
-   )
-}
+    </div>
+  );
+};
 
-export default About
+export default About;

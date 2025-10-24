@@ -1,6 +1,4 @@
-// import DeveloppementLogiciels from "@/components/clients";
-// <DeveloppementLogiciels />
-
+import DeveloppementLogiciels from "@/components/clients";
 import Wrapper from "@/layout/Wrapper";
 
 export const metadata = {
@@ -9,7 +7,7 @@ export const metadata = {
 const index = () => {
   return (
     <Wrapper>
-      <div>Developpement Logiciels</div>
+      <DeveloppementLogiciels />
     </Wrapper>
   );
 };
